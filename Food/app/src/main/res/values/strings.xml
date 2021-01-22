@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RecycleViewExample</string>
+    <string name="label_home">Головне меню</string>
+    <string name="button_text">Детальніше</string>
+    <string name="title_login">Welcome back</string>
+    <string name="bottom_title_login">Sign to continue</string>
+    <string name="email_label">Email</string>
+    <string name="pasword_label">Password</string>
+    <string name="bottom_pasword_label">Forgot password?</string>
+    <string name="button_login">LOGIN</string>
+    <string name="bottom_login">Don`t have an acount?</string>
+    <string name="right_bottom_login">Sing up</string>
+    <string name="title_create_acount">Create Account</string>
+    <string name="bottom_tittle_create_acount">Create a new account</string>
+    <string name="username">Username</string>
+    <string name="create_password">Create password</string>
+    <string name="retype_password">Retype password </string>
+    <string name="button_create_acount">CREATE ACCOUNT</string>
+    <string name="bottom_button_account">Already have a account?</string>
+    <string name="right_bottom_account">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
