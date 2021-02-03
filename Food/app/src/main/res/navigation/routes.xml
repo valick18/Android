@@ -3,36 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/routes.xml"
-    app:startDestination="@id/fragment1">
-
+    app:startDestination="@id/fragmentLogin">
     <fragment
-        android:id="@+id/fragment1"
-        android:name="Fragments.Fragment1"
-        android:label="Меню"
-        tools:layout="@layout/fragment_1" >
+        android:id="@+id/fragmentRecycle"
+        android:name="com.example.food.FragmentRecycle"
+        android:label="FragmentRecycle" />
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="Fragments.BasketFragment"
+        android:label="basket_fragment"
+        tools:layout="@layout/basket_fragment" />
+    <fragment
+        android:id="@+id/aboutMeFragment"
+        android:name="Fragments.AboutMeFragment"
+        android:label="about_me_fragment"
+        tools:layout="@layout/about_me_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="Fragments.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/userAccount"
+        android:name="Fragments.UserAccount"
+        android:label="user_account_fragment"
+        tools:layout="@layout/user_account_fragment" />
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.food.FragmentLogin"
+        android:label="FragmentLogin" >
         <action
-            android:id="@+id/action_fragment1_to_fragment42"
-            app:destination="@id/fragment4" />
+            android:id="@+id/action_fragmentLogin_to_fragmentRecycle"
+            app:destination="@id/fragmentRecycle" />
         <action
-            android:id="@+id/action_fragment1_to_fragment2"
-            app:destination="@id/fragment2" />
+            android:id="@+id/action_fragmentLogin_to_fragmentCreateAcc"
+            app:destination="@id/fragmentCreateAcc" />
         <action
-            android:id="@+id/action_fragment1_to_fragment3"
-            app:destination="@id/fragment3" />
+            android:id="@+id/action_fragmentLogin_to_userAccount"
+            app:destination="@id/userAccount" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_basketFragment"
+            app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentCreateAcc2"
+            app:destination="@id/fragmentCreateAcc" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_aboutMeFragment"
+            app:destination="@id/aboutMeFragment" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/fragment2"
-        android:name="Fragments.Fragment2"
-        android:label="Корзина"
-        tools:layout="@layout/fragment_2" />
-    <fragment
-        android:id="@+id/fragment3"
-        android:name="Fragments.Fragment3"
-        android:label="Мій аккаунт"
-        tools:layout="@layout/fragment_3" />
-    <fragment
-        android:id="@+id/fragment4"
-        android:name="Fragments.Fragment4"
-        android:label="Про нас"
-        tools:layout="@layout/fragment_4" />
+        android:id="@+id/fragmentCreateAcc"
+        android:name="com.example.food.FragmentCreateAcc"
+        android:label="FragmentCreateAcc" />
 </navigation>

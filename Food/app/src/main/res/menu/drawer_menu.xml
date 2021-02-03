@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:icon="@color/colorPrimary"
-        android:title="Adaptive menu"/>
 
     <item
-        android:id="@+id/fragment1"
+        android:id="@+id/fragmentRecycle"
         android:title="Меню"/>
 
     <item
-        android:id="@+id/fragment2"
+        android:id="@+id/basketFragment"
         android:title="Корзина" />
     <item
-        android:id="@+id/fragment3"
+        android:id="@+id/userAccount"
         android:title="Мій аккаунт" />
     <item
-        android:id="@+id/fragment4"
+        android:id="@+id/aboutMeFragment"
         android:title="Про нас" />
-
-    <item android:title=""/>
-    <item android:title=""/>
-    <item android:title=""/>
-    <item android:title=""/>
-    <item android:title=""/>
+    <item android:id="@+id/settingsFragment"
+        android:title="------"></item>
     <item android:title="Налаштування"/>
     <item android:title="Вихід"/>
 

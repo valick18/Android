@@ -16,29 +16,26 @@ import android.view.View;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    FragmentTransaction ft;
-    FragmentRecycle fragmentRecycle;
-    FragmentLogin fragmentLogin;
-    FragmentCreateAcc fragmentCreateAcc;
+
+    AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
 
-        NavHostFragment hostFragment = (NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.navFragment);
-        NavController controller = hostFragment.getNavController();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        NavigationUI.setupWithNavController(navigationView, controller);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
 
-        if (savedInstanceState == null) {
-            ft = getSupportFragmentManager().beginTransaction();
-            fragmentRecycle = new FragmentRecycle();
-            fragmentLogin = new FragmentLogin();
-            fragmentCreateAcc = new FragmentCreateAcc();
-            ft.replace(R.id.fragment,fragmentLogin);
-            ft.commit();
-        }
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.fragmentRecycle, R.id.userAccount, R.id.basketFragment, R.id.aboutMeFragment)
+                .setDrawerLayout(drawer)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.navFragment);
+
+        NavigationUI.setupWithNavController(navigationView, navController);
 
 
     }
@@ -46,22 +43,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        ft = getSupportFragmentManager().beginTransaction();
+        NavController controller = Navigation.findNavController(v);
         switch(v.getId()){
             case R.id.but_createAcc:
-                ft.replace(R.id.fragment,fragmentRecycle);
-                break;
             case R.id.but_login:
-                ft.replace(R.id.fragment,fragmentRecycle);
+                controller.navigate(R.id.fragmentRecycle);
                 break;
             case R.id.btn_signUp:
-                ft.replace(R.id.fragment,fragmentCreateAcc);
+                controller.navigate(R.id.fragmentCreateAcc);
                 break;
             case R.id.btn_signIn:
-                ft.replace(R.id.fragment,fragmentLogin);
+                controller.navigate(R.id.fragmentLogin);
             break;
         }
-        ft.addToBackStack(null);
-        ft.commit();
     }
 }
