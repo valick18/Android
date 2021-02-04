@@ -14,9 +14,9 @@
     <item
         android:id="@+id/aboutMeFragment"
         android:title="Про нас" />
+    <item android:title="------"></item>
     <item android:id="@+id/settingsFragment"
-        android:title="------"></item>
-    <item android:title="Налаштування"/>
+    android:title="Налаштування"/>
     <item android:title="Вихід"/>
 
 </menu>

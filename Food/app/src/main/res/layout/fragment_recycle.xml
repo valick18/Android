@@ -10,10 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/toolBar"
-            layout="@layout/tool_bar" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleViewCard"
             android:layout_width="match_parent"
