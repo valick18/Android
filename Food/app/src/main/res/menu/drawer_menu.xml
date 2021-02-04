@@ -14,10 +14,11 @@
     <item
         android:id="@+id/aboutMeFragment"
         android:title="Про нас" />
-    <item android:title="------"></item>
+    <group android:id="@+id/THIRD"  android:checkableBehavior="single">
     <item android:id="@+id/settingsFragment"
     android:title="Налаштування"/>
     <item android:id="@+id/exitFragment"
         android:title="Вихід"/>
+    </group>
 
 </menu>
