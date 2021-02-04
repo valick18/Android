@@ -17,6 +17,7 @@
     <item android:title="------"></item>
     <item android:id="@+id/settingsFragment"
     android:title="Налаштування"/>
-    <item android:title="Вихід"/>
+    <item android:id="@+id/exitFragment"
+        android:title="Вихід"/>
 
 </menu>
