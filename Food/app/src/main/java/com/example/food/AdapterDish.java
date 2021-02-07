@@ -2,19 +2,14 @@ package com.example.food;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.food.databases.Database;
-import com.example.food.databases.DishDao;
 
 import java.util.List;
 
@@ -28,10 +23,10 @@ public class AdapterDish extends RecyclerView.Adapter<AdapterDish.DishViewHolder
         public DishViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
-            nameDish =(TextView)itemView.findViewById(R.id.name_dishes);
-            priceDish = (TextView)itemView.findViewById(R.id.price_dishes);
-            imageDish = (ImageView)itemView.findViewById(R.id.dishes_photo);
-            buttonAddOrder = (ImageView)itemView.findViewById(R.id.ibtAddOrder);
+            nameDish =(TextView)itemView.findViewById(R.id.nameD);
+            priceDish = (TextView)itemView.findViewById(R.id.priceD);
+            imageDish = (ImageView)itemView.findViewById(R.id.dishesP);
+            buttonAddOrder = (ImageView)itemView.findViewById(R.id.btDeleteOrder);
             nameDish.setTextColor(Color.WHITE);
             priceDish.setTextColor(Color.WHITE);
         }

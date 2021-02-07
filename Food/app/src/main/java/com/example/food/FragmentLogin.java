@@ -14,7 +14,12 @@ public class FragmentLogin extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View v = inflater.inflate(R.layout.fragment_login,container,false);
+       MainActivity.titleBar.setText("Вхід");
+        View v = inflater.inflate(R.layout.fragment_login,container,false);
         return v;
+    }
+    public void onResume(){
+        super.onResume();
+        MainActivity.titleBar.setText("Вхід");
     }
 }

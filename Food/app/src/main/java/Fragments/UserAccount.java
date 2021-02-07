@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.food.MainActivity;
 import com.example.food.R;
 
 /**
@@ -51,6 +52,7 @@ public class UserAccount extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MainActivity.titleBar.setText("Аккаунт");
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -63,4 +65,10 @@ public class UserAccount extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.user_account_fragment, container, false);
     }
+
+    public void onResume(){
+        super.onResume();
+        MainActivity.titleBar.setText("Аккаунт");
+    }
+
 }

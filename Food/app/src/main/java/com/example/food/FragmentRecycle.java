@@ -20,6 +20,7 @@ public class FragmentRecycle extends Fragment {
     ArrayList<Dish> dishArrayList;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
+        MainActivity.titleBar.setText("Меню");
         View v = inflater.inflate(R.layout.fragment_recycle, parent, false);
 
         rv = (RecyclerView)v.findViewById(R.id.recycleViewCard);
@@ -37,4 +38,10 @@ public class FragmentRecycle extends Fragment {
 
         return v;
     }
+
+    public void onResume(){
+        super.onResume();
+        MainActivity.titleBar.setText("Меню");
+    }
+
 }

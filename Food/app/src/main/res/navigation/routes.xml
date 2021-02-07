@@ -11,27 +11,27 @@
     <fragment
         android:id="@+id/basketFragment"
         android:name="Fragments.BasketFragment"
-        android:label="basket_fragment"
-        tools:layout="@layout/basket_fragment" />
+        android:label="Корзина"
+        tools:layout="@layout/fragment_recycle" />
     <fragment
         android:id="@+id/aboutMeFragment"
         android:name="Fragments.AboutMeFragment"
-        android:label="about_me_fragment"
+        android:label="Про нас"
         tools:layout="@layout/about_me_fragment" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="Fragments.SettingsFragment"
-        android:label="settings_fragment"
+        android:label="Налаштування"
         tools:layout="@layout/settings_fragment" />
     <fragment
         android:id="@+id/userAccount"
         android:name="Fragments.UserAccount"
-        android:label="user_account_fragment"
+        android:label="Ваш аккаунт"
         tools:layout="@layout/user_account_fragment" />
     <fragment
         android:id="@+id/fragmentLogin"
         android:name="com.example.food.FragmentLogin"
-        android:label="FragmentLogin" >
+        android:label="Вхід" >
         <action
             android:id="@+id/action_fragmentLogin_to_fragmentRecycle"
             app:destination="@id/fragmentRecycle" />
@@ -57,9 +57,9 @@
     <fragment
         android:id="@+id/fragmentCreateAcc"
         android:name="com.example.food.FragmentCreateAcc"
-        android:label="FragmentCreateAcc" />
+        android:label="Реєстрування" />
     <fragment
         android:id="@+id/exitFragment"
         android:name="Fragments.ExitFragment"
-        android:label="ExitFragment" />
+        android:label="Вихід" />
 </navigation>

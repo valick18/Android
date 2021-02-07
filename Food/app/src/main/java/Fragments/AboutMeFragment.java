@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.food.MainActivity;
 import com.example.food.R;
 
 /**
@@ -50,6 +51,7 @@ public class AboutMeFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        MainActivity.titleBar.setText("Про нас");
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -63,4 +65,10 @@ public class AboutMeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.about_me_fragment, container, false);
     }
+
+    public void onResume(){
+        super.onResume();
+        MainActivity.titleBar.setText("Про нас");
+    }
+
 }

@@ -12,21 +12,25 @@ import androidx.room.Room;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.food.databases.Database;
 import com.google.android.material.navigation.NavigationView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private static MainActivity instance;
     private Database database;
+    public static TextView titleBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        titleBar = (TextView) findViewById(R.id.titleText);
         instance = this;
         database = Room.databaseBuilder(this,Database.class,"database")
                 .allowMainThreadQueries()
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ImageView burgerButton = findViewById(R.id.badge_icon_button);
         burgerButton.setOnClickListener(e->drawer.openDrawer(GravityCompat.START));
+
     }
 
     @Override

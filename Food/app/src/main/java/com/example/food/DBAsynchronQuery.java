@@ -12,6 +12,7 @@ public class DBAsynchronQuery extends AsyncTask<Dish,Void,Void> {
 
   public static final int INSERT = 1;
   public static final int DELETE = 2;
+  public static final int DELETE_ALL = 3;
 
     private Context context;
     private int action;
@@ -32,13 +33,24 @@ public class DBAsynchronQuery extends AsyncTask<Dish,Void,Void> {
             case DELETE:
                 dishDao.delete(dishes[0]);
                 break;
+            case DELETE_ALL:
+                dishDao.deleteAll();
+                break;
         }
         return null;
     }
 
     @Override
     protected void onPostExecute(Void result) {
-        Toast.makeText(context,"Заказ добавлен в корзину", Toast.LENGTH_LONG).show();
+        switch (action) {
+            case INSERT:
+                Toast.makeText(context,"Заказ додано в корзину", Toast.LENGTH_SHORT).show();
+                break;
+            case DELETE:
+                Toast.makeText(context,"Заказ видалений із корзини", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
         for(Dish d: dishDao.getAll()){
             Log.d("Root",""+d);
         }

@@ -13,6 +13,13 @@ public class FragmentCreateAcc extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        MainActivity.titleBar.setText("Реєстрація");
         return inflater.inflate(R.layout.fragment_create_account,container,false);
     }
+
+    public void onResume(){
+        super.onResume();
+        MainActivity.titleBar.setText("Реєстрація");
+    }
+
 }
